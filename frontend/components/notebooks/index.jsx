@@ -23,13 +23,14 @@ var NotebookIndex = React.createClass({
 
   render: function(){
     var notebooks = this.state.notebooks.map(function (notebook, idx) {
-      return <li key={idx}>{notebook.title}</li>
+      return <NotebookIndexItem notebook={notebook} key={idx}/>
     });
 
     return (
-      <ul>
+      <div>
         {notebooks}
-      </ul>
+        {this.props.children}
+      </div>
     );
   }
 

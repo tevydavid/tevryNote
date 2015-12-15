@@ -5,10 +5,8 @@ var notebookActions = {
     Dispatcher.dispatch({
       actionType: 'NOTEBOOKS_RECEIVED',
       notebooks: notebooks
-    })
+    });
   }
-
-
 
 };
 
