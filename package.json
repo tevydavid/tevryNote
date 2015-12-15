@@ -1,0 +1,36 @@
+{
+  "name": "tevryNote",
+  "version": "1.0.0",
+  "description": "[Heroku link][heroku] **NB:** This should be a link to your production site",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tevydavid/tevryNote.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tevydavid/tevryNote/issues"
+  },
+  "homepage": "https://github.com/tevydavid/tevryNote#readme",
+  "dependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-react": "^6.3.13",
+    "flux": "^2.1.1",
+    "history": "^1.13.1",
+    "jquery": "^2.1.4",
+    "react": "^0.14.3",
+    "react-addons-linked-state-mixin": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.2",
+    "webpack": "^1.12.9"
+  }
+}
