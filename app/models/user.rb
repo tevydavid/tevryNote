@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     user
   end
 
-  def password=(password)
+  def ssword=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
