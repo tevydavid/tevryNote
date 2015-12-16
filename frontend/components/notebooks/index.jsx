@@ -1,7 +1,8 @@
 var React = require('react'),
-    NotebookStore = require('../../stores/notebook.js'),
-    ApiUtil = require('../../util/apiUtil.js'),
-    NotebookIndexItem = require('./indexItem.jsx');
+    NotebookStore = require('../../stores/notebook'),
+    ApiUtil = require('../../util/apiUtil'),
+    NotebookIndexItem = require('./indexItem'),
+    Form = require('./form');
 
 var NotebookIndex = React.createClass({
   getInitialState: function(){
@@ -28,6 +29,7 @@ var NotebookIndex = React.createClass({
 
     return (
       <div>
+        <Form/>
         {notebooks}
         {this.props.children}
       </div>

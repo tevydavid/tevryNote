@@ -9,9 +9,19 @@ var ApiUtil = {
         NotebookActions.receiveAllNotebooks(notebooks);
       }
     })
-
-
   },
+
+  createNotebook: function(notebook, callback){
+    $.ajax({
+      url: 'api/notebooks',
+      type: 'POST',
+      data: {notebook: notebook},
+      success: function(notebook){
+        NotebookActions.receiveSingleNotebook(notebook);
+        callback && callback(notebook.id);
+      }
+    })
+  }
 };
 
 module.exports = ApiUtil;

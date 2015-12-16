@@ -6,6 +6,12 @@ var notebookActions = {
       actionType: 'NOTEBOOKS_RECEIVED',
       notebooks: notebooks
     });
+  },
+  receiveSingleNotebook: function(notebook){
+    Dispatcher.dispatch({
+      actionType: 'SINGLE_NOTEBOOK_RECEIVED',
+      notebook: notebook
+    });
   }
 
 };

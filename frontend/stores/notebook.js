@@ -17,6 +17,9 @@ NotebookStore.__onDispatch = function (payload) {
     case 'NOTEBOOKS_RECEIVED':
       resetNotebooks(payload.notebooks);
       break;
+    case 'SINGLE_NOTEBOOK_RECEIVED':
+      _notebooks.push(payload.notebook);
+      break;
   }
 
   NotebookStore.__emitChange();
