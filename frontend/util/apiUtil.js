@@ -1,4 +1,5 @@
-var NotebookActions = require('../actions/notebookActions.js');
+var NotebookActions = require('../actions/notebookActions'),
+    NoteActions = require('../actions/noteActions');
 
 var ApiUtil = {
   fetchAllNotebooks: function(){
@@ -19,6 +20,16 @@ var ApiUtil = {
       success: function(notebook){
         NotebookActions.receiveSingleNotebook(notebook);
         callback && callback(notebook.id);
+      }
+    })
+  },
+
+  fetchAllNotes: function(notebookId){
+    $.ajax({
+      url: 'api/notebooks/' + notebookId,
+      type: 'GET',
+      success: function (notes) {
+        NoteActions.receiveAllNotes(notes);
       }
     })
   }

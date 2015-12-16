@@ -13,7 +13,6 @@ var notebookActions = {
       notebook: notebook
     });
   }
-
 };
 
 module.exports = notebookActions;
