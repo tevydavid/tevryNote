@@ -28,10 +28,14 @@ var NotebookIndex = React.createClass({
     });
 
     return (
-      <div>
-        <Form/>
-        {notebooks}
-        {this.props.children}
+      <div className='container group'>
+        <div className='notebook-container'>
+          <Form/>
+          {notebooks}
+        </div>
+        <div className='notes-container'>
+          {this.props.children}
+        </div>
       </div>
     );
   }
