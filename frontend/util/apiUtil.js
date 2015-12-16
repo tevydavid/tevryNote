@@ -9,7 +9,7 @@ var ApiUtil = {
       success: function (notebooks) {
         NotebookActions.receiveAllNotebooks(notebooks);
       }
-    })
+    });
   },
 
   createNotebook: function(notebook, callback){
@@ -21,7 +21,7 @@ var ApiUtil = {
         NotebookActions.receiveSingleNotebook(notebook);
         callback && callback(notebook.id);
       }
-    })
+    });
   },
 
   fetchAllNotes: function(notebookId){
@@ -31,7 +31,7 @@ var ApiUtil = {
       success: function (notes) {
         NoteActions.receiveAllNotes(notes);
       }
-    })
+    });
   },
 
   createNote: function(note, notebookId){
@@ -42,7 +42,18 @@ var ApiUtil = {
       success: function (note) {
         NoteActions.receiveSingleNote(note);
       }
-    })
+    });
+  },
+
+  updateNote: function(note){
+    $.ajax({
+      url: 'api/notes/' + note.id,
+      type: 'PUT',
+      data: {note: note},
+        success: function(note) {
+          NoteActions.receiveSingleNote(note);
+        }
+    });
   }
 
 };

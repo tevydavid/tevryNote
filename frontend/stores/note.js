@@ -2,15 +2,22 @@ var Store = require('flux/utils').Store,
     AppDispatcher = require('../dispatcher/dispatcher'),
     NoteStore = new Store(AppDispatcher);
 
-var _notes = [];
+var _notes = {};
 
 var resetNotes = function(notes){
-  _notes = notes;
-}
+  _notes = {};
+  notes.forEach(function(note){
+    _notes[note.id] = note;
+  });
+};
 
 NoteStore.all = function(){
-  return _notes;
-}
+  var notes = [];
+  for (var id in _notes) {
+    notes.push(_notes[id]);
+  }
+  return notes;
+};
 
 NoteStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
@@ -18,11 +25,11 @@ NoteStore.__onDispatch = function (payload) {
       resetNotes(payload.notes);
       break;
     case 'SINGLE_NOTE_RECEIVED':
-      _notes.unshift(payload.note);
+      _notes[payload.note.id] = payload.note;
       break;
   }
 
   NoteStore.__emitChange();
-}
+};
 
 module.exports = NoteStore;

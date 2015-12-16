@@ -14,7 +14,7 @@
  *= require_self
  */
 
-div {
+div, p {
   margin: 0;
   padding: 0;
   border: 0;
@@ -46,4 +46,30 @@ div {
 .notes-container{
   float: right;
   width: 70%
+}
+
+.note-container{
+  outline: 1px solid
+}
+
+.note-header{
+  height: 30px;
+  outline: 1px solid
+}
+
+.note-title{
+  padding: 3px;
+  float: left;
+  font-weight: bolder;
+}
+
+.liked {
+  padding: 3px;
+  color: red;
+  float: right;
+}
+
+.note-body{
+  height: 100px;
+
 }
