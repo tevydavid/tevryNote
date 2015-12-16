@@ -10,12 +10,12 @@ var NotebookIndexItem = React.createClass({
 
   render: function () {
     return(
-      <div onClick={this.showNotes}>
-        <p>Title: {this.props.notebook.title}</p>
-        <p>Description: {this.props.notebook.description}</p>
+      <div onClick={this.showNotes} className='notebook-menu-item button'>
+        <p className='notebook-title'><i className="fa fa-book"></i>&nbsp; {this.props.notebook.title}</p>
+        <p className='notebook-description'>{this.props.notebook.description}</p>
       </div>
     );
   }
 });
 
-module.exports = NotebookIndexItem; 
+module.exports = NotebookIndexItem;

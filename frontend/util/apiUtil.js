@@ -54,6 +54,17 @@ var ApiUtil = {
           NoteActions.receiveSingleNote(note);
         }
     });
+  },
+
+  deleteNote: function(note){
+    $.ajax({
+      url: 'api/notes/' + note.id,
+      type: 'DELETE',
+      data: {note: note},
+        success: function(note) {
+          NoteActions.deleteNote(note);
+        }
+    });
   }
 
 };

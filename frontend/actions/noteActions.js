@@ -12,6 +12,12 @@ var noteActions = {
       actionType: 'SINGLE_NOTE_RECEIVED',
       note: note
     });
+  },
+  deleteNote: function(note){
+    Dispatcher.dispatch({
+      actionType: 'NOTE_DELETED',
+      note: note
+    });
   }
 };
 

@@ -11,9 +11,12 @@ var ReactDOM = require('react-dom'),
 var App = React.createClass({
   render: function(){
     return (
-        <div>
-          <header><h1>TevryNote</h1></header>
-          {this.props.children}
+        <div className='everything'>
+          <header><h1 className='app-header-banner'></h1></header>
+          <div className='body-container group'>
+            <NotebookIndex />
+            {this.props.children}
+          </div>
         </div>
     );
   }
@@ -21,9 +24,7 @@ var App = React.createClass({
 
 var routes = (
     <Route path="/" component={App}>
-      <Route path="notebooks" component={NotebookIndex}>
-        <Route path=":id" component={NotesIndex} />
-      </Route>
+        <Route path="notebooks/:id" component={NotesIndex} />
     </Route>
 );
 

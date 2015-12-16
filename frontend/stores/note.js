@@ -27,6 +27,9 @@ NoteStore.__onDispatch = function (payload) {
     case 'SINGLE_NOTE_RECEIVED':
       _notes[payload.note.id] = payload.note;
       break;
+    case 'NOTE_DELETED':
+      delete _notes[payload.note.id];
+      break;
   }
 
   NoteStore.__emitChange();

@@ -18,17 +18,23 @@ var noteForm = React.createClass({
 
   render: function(){
     return(
-      <form onSubmit={this.createNote}>
-        <div>
-          <label>Title:</label>
-          <input type='text' valueLink={this.linkState('title')}/>
-        </div>
-        <div>
-          <label>Description:</label>
-          <input type='text' valueLink={this.linkState('body')}/>
-        </div>
-        <button>Create Note</button>
-      </form>
+      <div className='note-form-container'>
+        <form onSubmit={this.createNote}>
+          <div>
+            <input type='text'
+                    className='note-form-title'
+                    valueLink={this.linkState('title')}
+                    placeholder='Note Title'/>
+          </div>
+          <div>
+            <textarea type='text'
+                      className='note-form-body'
+                      valueLink={this.linkState('body')}
+                      placeholder="Captain's Log, stardate 41153.7..."/>
+          </div>
+          <button className='note-form-button'>Create Note</button>
+        </form>
+      </div>
     );
   }
 });

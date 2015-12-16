@@ -28,14 +28,14 @@ var NotesIndex = React.createClass({
 
   render: function(){
     var notes = this.state.notes.map(function(note, idx){
-      return <NoteIndexItem key={idx} note={note}/>
-    })
+      return <NoteIndexItem key={idx} note={note}/>;
+    });
     return(
-      <div>
+      <div className='notes-container'>
         <NoteForm notebookId={this.props.params.id}/>
         {notes}
       </div>
-    )
+    );
   }
 
 });

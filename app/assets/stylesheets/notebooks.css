@@ -1,0 +1,30 @@
+
+.notebooks-container{
+  float: left;
+  width: 30%;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.notebook-menu-item{
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+}
+
+.notebook-menu-item:hover{
+  background-color: aliceblue;
+
+
+}
+
+.notebook-title{
+
+
+}
+
+.notebook-description{
+  color: grey;
+
+}

@@ -1,0 +1,47 @@
+
+.notes-container{
+  float: right;
+  width: 70%
+}
+
+.note-container{
+  outline: 1px solid
+}
+
+.note-header{
+  height: 30px;
+  outline: 1px solid
+}
+
+.note-title{
+  padding: 3px;
+  float: left;
+  font-weight: bolder;
+}
+
+.liked {
+  padding: 3px;
+  color: red;
+  float: right;
+}
+.note-delete{
+  padding: 3px;
+  color: blue;
+  float: right;
+}
+.note-body{
+  white-space: pre-wrap;
+  min-height: 90px;
+}
+.note-form-title{
+  margin: 4px;
+}
+.note-form-body{
+  margin: 4px;
+  width: 680px;
+  height: 100px;
+  margin-bottom: 0px;
+}
+.note-form-button{
+  margin: 3px;
+}

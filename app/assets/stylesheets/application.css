@@ -27,49 +27,35 @@ div, p {
   box-sizing: inherit;
   background: transparent;
 }
+.everything{
+  width: 100%;
+}
+
+header {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #C6E5EF;
+  width: 100%;
+}
+
+textarea{
+  resize: none;
+}
+
+button:hover, .button:hover{
+  cursor: pointer;
+}
 .group:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.container{
+.body-container{
   outline: 1px solid;
-  width: 1000px
-}
-
-.notebook-container{
-  float: left;
-  width: 30%;
-}
-
-.notes-container{
-  float: right;
-  width: 70%
-}
-
-.note-container{
-  outline: 1px solid
-}
-
-.note-header{
-  height: 30px;
-  outline: 1px solid
-}
-
-.note-title{
-  padding: 3px;
-  float: left;
-  font-weight: bolder;
-}
-
-.liked {
-  padding: 3px;
-  color: red;
-  float: right;
-}
-
-.note-body{
-  height: 100px;
-
+  min-width: 1000px;
+  max-width: 1500px;
+  min-height: 500px;
+  margin-left: 0;
+  margin-right: auto;
 }
