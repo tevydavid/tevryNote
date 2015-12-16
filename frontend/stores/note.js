@@ -18,7 +18,7 @@ NoteStore.__onDispatch = function (payload) {
       resetNotes(payload.notes);
       break;
     case 'SINGLE_NOTE_RECEIVED':
-      _notes.push(payload.note);
+      _notes.unshift(payload.note);
       break;
   }
 

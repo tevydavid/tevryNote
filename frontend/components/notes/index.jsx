@@ -1,11 +1,14 @@
 var React = require('react'),
     NoteStore = require('../../stores/note'),
+    NoteIndexItem = require('./indexItem'),
+    NoteForm = require('./form'),
     ApiUtil = require('../../util/apiUtil');
 
-var Notes = React.createClass({
+var NotesIndex = React.createClass({
   getInitialState: function(){
     return ({notes: NoteStore.all()});
   },
+
   _onChange: function(){
     this.setState({notes: NoteStore.all()});
   },
@@ -25,13 +28,16 @@ var Notes = React.createClass({
 
   render: function(){
     var notes = this.state.notes.map(function(note, idx){
-      return <div key={idx}>{note.title} {note.body}</div>
+      return <NoteIndexItem key={idx} note={note}/>
     })
     return(
-      <div>{notes}</div>
+      <div>
+        <NoteForm notebookId={this.props.params.id}/>
+        {notes}
+      </div>
     )
   }
 
 });
 
-module.exports = Notes;
+module.exports = NotesIndex;

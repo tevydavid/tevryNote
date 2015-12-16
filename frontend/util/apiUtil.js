@@ -32,7 +32,19 @@ var ApiUtil = {
         NoteActions.receiveAllNotes(notes);
       }
     })
+  },
+
+  createNote: function(note, notebookId){
+    $.ajax({
+      url: 'api/notebooks/' + notebookId +'/notes',
+      type: 'POST',
+      data: {note: note},
+      success: function (note) {
+        NoteActions.receiveSingleNote(note);
+      }
+    })
   }
+
 };
 
 module.exports = ApiUtil;

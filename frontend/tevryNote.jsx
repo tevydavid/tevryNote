@@ -5,7 +5,7 @@ var ReactDOM = require('react-dom'),
     Route = ReactRouter.Route,
     IndexRoute = ReactRouter.IndexRoute,
     NotebookIndex = require('./components/notebooks/index'),
-    Notes = require('./components/notes/notes.jsx');
+    NotesIndex = require('./components/notes/index');
 
 
 var App = React.createClass({
@@ -22,7 +22,7 @@ var App = React.createClass({
 var routes = (
     <Route path="/" component={App}>
       <Route path="notebooks" component={NotebookIndex}>
-        <Route path=":id" component={Notes} />
+        <Route path=":id" component={NotesIndex} />
       </Route>
     </Route>
 );
