@@ -14,7 +14,8 @@ var NotebookFormOption = React.createClass({
     if (this.state.clicked){
       return (
         <div className='notebook-form-box'>
-          <NotebookForm toggleClicked={this.toggleClicked}/>
+          <NotebookForm toggleClicked={this.toggleClicked}
+              notebookId={this.props.notebookId}/>
         </div>
       );
     } else {

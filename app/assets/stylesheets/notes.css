@@ -49,3 +49,27 @@
 .note-form-button{
   margin: 3px;
 }
+.note-form-box{
+  width: auto;
+  min-height: 96px;
+  margin: 0
+
+}
+
+.new-note{
+  position: relative;
+  width: 59px;
+  margin-top: 22px;
+  margin-left: 50px;
+}
+
+.note-form-container{
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  width: inherit;
+}
+
+.note-form .canel{
+  float: right;
+}

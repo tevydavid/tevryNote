@@ -1,7 +1,7 @@
 var React = require('react'),
     NoteStore = require('../../stores/note'),
     NoteIndexItem = require('./indexItem'),
-    NoteForm = require('./form'),
+    NoteFormOption = require('./formOption'),
     ApiUtil = require('../../util/apiUtil');
 
 var NotesIndex = React.createClass({
@@ -32,7 +32,7 @@ var NotesIndex = React.createClass({
     });
     return(
       <div className='notes-container'>
-        <NoteForm notebookId={this.props.params.id}/>
+        <NoteFormOption notebookId={this.props.params.id}/>
         {notes}
       </div>
     );
