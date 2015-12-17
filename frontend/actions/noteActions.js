@@ -7,6 +7,12 @@ var noteActions = {
       notes: notes
     });
   },
+  receiveLikedNotes: function (likedNotes){
+    Dispatcher.dispatch({
+      actionType: 'LIKED_NOTES_RECEIVED',
+      likedNotes: likedNotes
+    });
+  },
   receiveSingleNote: function(note){
     Dispatcher.dispatch({
       actionType: 'SINGLE_NOTE_RECEIVED',
