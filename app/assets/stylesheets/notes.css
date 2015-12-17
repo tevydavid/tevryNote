@@ -5,18 +5,20 @@
 }
 
 .note-container{
-  outline: 1px solid
+  margin: 10px;
+  padding: 5px;
+  background: white;
 }
 
 .note-header{
   height: 30px;
-  outline: 1px solid
 }
 
 .note-title{
   padding: 3px;
   float: left;
   font-weight: bolder;
+  color: green;
 }
 
 .liked {
@@ -31,6 +33,8 @@
 }
 .note-body{
   white-space: pre-wrap;
+  padding-top: 5px;
+  padding-left: 25px;
   min-height: 90px;
 }
 .note-form-title{

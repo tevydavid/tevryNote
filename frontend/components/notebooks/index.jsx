@@ -2,7 +2,7 @@ var React = require('react'),
     NotebookStore = require('../../stores/notebook'),
     ApiUtil = require('../../util/apiUtil'),
     NotebookIndexItem = require('./indexItem'),
-    Form = require('./form');
+    NotebookFormOption = require('./formOption');
 
 var NotebookIndex = React.createClass({
   getInitialState: function(){
@@ -30,7 +30,7 @@ var NotebookIndex = React.createClass({
     return (
         <div className='notebooks-container'>
           <h2 className='notebooks-header'>MY NOTEBOOKS</h2>
-          <Form/>
+          <NotebookFormOption/>
           {notebooks}
         </div>
     );

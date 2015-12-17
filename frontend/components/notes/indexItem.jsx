@@ -19,13 +19,12 @@ var NoteIndexItem = React.createClass({
 
   render: function(){
     var heartClass = this.props.note.liked ? 'fa fa-heart' : 'fa fa-heart-o';
-    heartClass += ' like botton';
     return (
       <div className='note-container'>
         <div className='note-header group'>
-          <p className='note-title'>{this.props.note.title}</p>
+          <p className='note-title'><i className="fa fa-sticky-note"></i>&nbsp; {this.props.note.title}</p>
           <p className='note-delete button' onClick={this.deleteNote}>✗</p>
-          <i className={heartClass} onClick={this.toggleLike}/>
+          <p className='liked button'><i className={heartClass} onClick={this.toggleLike}/></p>
         </div>
         <div className='note-body group'>
           {this.props.note.body}

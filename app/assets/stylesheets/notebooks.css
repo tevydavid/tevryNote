@@ -1,4 +1,8 @@
 
+.notebooks-header{
+  margin: 5px;
+  text-indent: 20px;
+}
 .notebooks-container{
   float: left;
   width: 30%;
@@ -15,16 +19,79 @@
 
 .notebook-menu-item:hover{
   background-color: aliceblue;
-
-
 }
 
 .notebook-title{
-
-
 }
 
 .notebook-description{
   color: grey;
+}
 
+.notebook-form-box{
+  min-height: 50px;
+  height: auto;
+  min-width: 200px;
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+.new-notebook{
+  height: 20px;
+  width: 80px;
+  margin-left: 23px;
+  padding: 15px;
+}
+.notebook-form{
+  width: inherit;
+  height: 90px;
+  padding: 5px;
+  margin-left: 2.5px;
+  background-color: white;
+}
+.new-notebook:hover{
+  color: green;
+}
+.notebook-form .cancel{
+  float: right;
+}
+.create-notebook{
+  float: right;
+}
+.notebook-form-title {
+  font-size: 20px;
+  padding: 2px;
+  margin: 5px;
+  width: 250px;
+  height: 22px;
+}
+.notebook-form-description{
+  padding: 2px;
+  margin: 5px;
+  min-width: 272px;
+  height: 50px;
+}
+.notebook-button{
+  color: #A9A9A9;
+  float: right;
+  width: 50px;
+  display: block;
+  margin: 1px;
+}
+
+.cancel{
+  padding: 2px;
+  margin: 3px;
+}
+
+.cancel:hover{
+  color: red;
+}
+.create-notebook{
+  padding: 2px;
+  margin: 3px;
+}
+
+.create-notebook:hover{
+  color: green;
 }
