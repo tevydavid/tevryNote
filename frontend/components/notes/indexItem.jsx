@@ -1,7 +1,15 @@
 var React = require('react'),
-    ApiUtil = require('../../util/apiUtil');
+    ApiUtil = require('../../util/apiUtil'),
+    UpdateForm = require('./UpdateNote');
 
 var NoteIndexItem = React.createClass({
+  getInitialState: function(){
+    return({clicked: false});
+  },
+
+  toggleClicked: function(){
+    this.setState({clicked: !this.state.clicked});
+  },
 
   toggleLike: function(e){
     e.preventDefault;
@@ -19,18 +27,22 @@ var NoteIndexItem = React.createClass({
 
   render: function(){
     var heartClass = this.props.note.liked ? 'fa fa-heart' : 'fa fa-heart-o';
-    return (
-      <div className='note-container'>
-        <div className='note-header group'>
-          <p className='note-title'><i className="fa fa-sticky-note"></i>&nbsp; {this.props.note.title}</p>
-          <p className='note-delete button' onClick={this.deleteNote}>✗</p>
-          <p className='liked button'><i className={heartClass} onClick={this.toggleLike}/></p>
+    if (this.state.clicked){
+      return <UpdateForm noteId={this.props.note.id} toggleClicked={this.toggleClicked}/>;
+    } else {
+      return (
+        <div className='note-container'>
+          <div className='note-header group'>
+            <p className='note-title' onDoubleClick={this.toggleClicked}><i className="fa fa-sticky-note"></i>&nbsp; {this.props.note.title}</p>
+            <p className='note-delete button' onClick={this.deleteNote}>✗</p>
+            <p className='liked button'><i className={heartClass} onClick={this.toggleLike}/></p>
+          </div>
+          <div className='note-body group' onDoubleClick={this.toggleClicked}>
+            {this.props.note.body}
+          </div>
         </div>
-        <div className='note-body group'>
-          {this.props.note.body}
-        </div>
-      </div>
-    );
+      );
+    }
   }
 });
 

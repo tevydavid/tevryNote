@@ -19,6 +19,14 @@ NoteStore.all = function(){
   return notes;
 };
 
+NoteStore.find = function(id){
+  if (_notes[id]){
+    return _notes[id];
+  } else {
+    return {};
+  }
+};
+
 NoteStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case 'NOTES_RECEIVED':

@@ -20,7 +20,11 @@ NotebookStore.all = function(){
 };
 
 NotebookStore.find = function(id){
-  return _notebooks[id];
+  if (_notebooks[id]) {
+    return _notebooks[id];
+  } else {
+    return {};
+  }
 },
 
 NotebookStore.__onDispatch = function (payload) {
