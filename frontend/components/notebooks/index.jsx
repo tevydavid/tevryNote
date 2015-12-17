@@ -15,6 +15,7 @@ var NotebookIndex = React.createClass({
   _onChange: function(){
     this.setState({notebooks: NotebookStore.all()});
   },
+
   showLikes: function(){
     this.history.pushState(null, '/likes', {});
   },

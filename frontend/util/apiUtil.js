@@ -12,6 +12,16 @@ var ApiUtil = {
     });
   },
 
+  fetchSingleNotebook: function (notebookId) {
+    $.ajax({
+      url: 'api/notebooks/' + notebookId,
+      type: 'GET',
+      success: function (notebook) {
+        NotebookActions.receiveSingleNotebook(notebook);
+      }
+    })
+  },
+
   createNotebook: function (notebook, callback) {
     $.ajax({
       url: 'api/notebooks',
@@ -24,9 +34,20 @@ var ApiUtil = {
     });
   },
 
+  updateNotebook: function (notebook) {
+    $.ajax({
+      url: 'api/notebooks/' + notebook.id,
+      type: 'PUT',
+      data: {notebook: notebook},
+      success: function (notebook) {
+        NoteActions.receiveSingleNotebook(notebook);
+      }
+    });
+  },
+
   fetchAllNotes: function (notebookId) {
     $.ajax({
-      url: 'api/notebooks/' + notebookId,
+      url: 'api/notebooks/' + notebookId + '/notes',
       type: 'GET',
       success: function (notes) {
         NoteActions.receiveAllNotes(notes);

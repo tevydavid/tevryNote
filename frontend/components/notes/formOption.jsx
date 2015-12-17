@@ -10,11 +10,15 @@ var NoteFormOption = React.createClass({
     this.setState({clicked: !this.state.clicked});
   },
 
+  componentWillReceiveProps: function(){
+    this.setState({clicked: false});
+  },
+
   render: function(){
     if (this.state.clicked) {
       return (
         <div className = 'note-form-box group'>
-          <NoteForm toggleClicked={this.toggleClicked}/>
+          <NoteForm toggleClicked={this.toggleClicked} notebookId = {this.props.notebookId}/>
         </div>
       );
     } else {

@@ -12,12 +12,12 @@ class Api::NotebooksController < ApplicationController
   end
 
   def show
-    @notes = Notebook.find(params[:id]).notes
+    @notebook = Notebook.find(params[:id])
   end
 
   def liked
     @notes = current_user.notes.where(liked: true)
-    render './api/notebooks/show.json.jbuilder'
+    render './api/notes/index.json.jbuilder'
   end
 
   def update

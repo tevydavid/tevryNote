@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :notes, only: [:destroy, :update]
     resources :notebooks, only: [:create, :destroy, :update, :index, :show] do
-      resources :notes, only: [:create]
+      resources :notes, only: [:create, :index]
     end
   end
 

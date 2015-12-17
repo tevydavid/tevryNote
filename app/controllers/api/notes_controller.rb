@@ -7,6 +7,10 @@ class Api::NotesController < ApplicationController
     @note.save!
   end
 
+  def index
+      @notes = Notebook.find(params[:notebook_id]).notes
+  end
+
   def update
     @note = Note.find(params[:id])
     @note.update(note_params)
