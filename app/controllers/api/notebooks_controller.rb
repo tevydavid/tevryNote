@@ -21,9 +21,15 @@ class Api::NotebooksController < ApplicationController
   end
 
   def update
+    @notebook = Notebook.find(params[:id])
+    @notebook.update(notebook_params)
+    render :show
   end
 
   def destroy
+    @notebook = Notebook.find(params[:id])
+    @notebook.destroy
+    render :show
   end
 
   private

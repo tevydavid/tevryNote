@@ -40,7 +40,19 @@ var ApiUtil = {
       type: 'PUT',
       data: {notebook: notebook},
       success: function (notebook) {
-        NoteActions.receiveSingleNotebook(notebook);
+        NotebookActions.receiveSingleNotebook(notebook);
+      }
+    });
+  },
+
+  deleteNotebook: function(notebook, callback){
+    $.ajax({
+      url: 'api/notebooks/' + notebook.id,
+      type: 'DELETE',
+      data: {notebook: notebook},
+      success: function (notebook) {
+        NotebookActions.deleteNotebook(notebook);
+        callback && callback(notebook.id);
       }
     });
   },

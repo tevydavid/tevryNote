@@ -25,7 +25,7 @@ NotebookStore.find = function(id){
   } else {
     return {};
   }
-},
+};
 
 NotebookStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
@@ -35,9 +35,12 @@ NotebookStore.__onDispatch = function (payload) {
     case 'SINGLE_NOTEBOOK_RECEIVED':
       _notebooks[payload.notebook.id] = payload.notebook;
       break;
+    case 'NOTEBOOK_DELETED':
+      delete _notebooks[payload.notebook.id];
+      break;
   }
 
   NotebookStore.__emitChange();
-}
+};
 
 module.exports = NotebookStore;

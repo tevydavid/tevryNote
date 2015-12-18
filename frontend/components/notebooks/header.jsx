@@ -1,25 +1,30 @@
 var React = require('react'),
     NotebookStore = require('../../stores/notebook.js'),
     ApiUtil = require('../../util/apiUtil'),
+    UpdateNotebook = require('./updateNotebook'),
     History = require('react-router').History;
 
 var Header = React.createClass({
   mixins: [History],
 
   getInitialState: function(){
-    return({notebook: NotebookStore.find(this.props.notebookId)});
+    return({notebook: NotebookStore.find(this.props.notebookId), clicked: false});
   },
 
   componentWillReceiveProps: function(newProps){
     this.setState({notebook: NotebookStore.find(newProps.notebookId)});
   },
   componentDidMount: function(){
-    this.notebookStoreListener = NotebookStore.addListener(this.updateNotebook);
+    this.notebookStoreListener = NotebookStore.addListener(this._onChange);
     ApiUtil.fetchSingleNotebook(this.props.notebookId);
   },
 
-  updateNotebook: function(){
+  _onChange: function(){
     this.setState({notebook: NotebookStore.find(this.props.notebookId)});
+  },
+
+  toggleClicked: function(){
+    this.setState({clicked: !this.state.clicked});
   },
 
   componentWillUnmount: function(){
@@ -27,12 +32,18 @@ var Header = React.createClass({
   },
 
   render: function () {
-    return(
-      <div>
-        <p>{this.state.notebook.title}</p>
-        <p>{this.state.notebook.description}</p>
-      </div>
-    );
+    if (this.state.clicked){
+      return (
+        <UpdateNotebook notebookId={this.props.notebookId} toggleClicked={this.toggleClicked}/>
+      );
+    } else {
+      return(
+        <div>
+          <p onDoubleClick={this.toggleClicked}>{this.state.notebook.title}</p>
+          <p onDoubleClick={this.toggleClicked}>{this.state.notebook.description}</p>
+        </div>
+      );
+    }
   }
 });
 

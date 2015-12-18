@@ -12,6 +12,13 @@ var notebookActions = {
       actionType: 'SINGLE_NOTEBOOK_RECEIVED',
       notebook: notebook
     });
+  },
+  
+  deleteNotebook: function(notebook){
+    Dispatcher.dispatch({
+      actionType: 'NOTEBOOK_DELETED',
+      notebook: notebook
+    });
   }
 };
 
