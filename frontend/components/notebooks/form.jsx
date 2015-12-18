@@ -22,7 +22,7 @@ var NotebookForm = React.createClass({
   render: function(){
     return(
       <div className='notebook-form'>
-        <form className='group'>
+        <form onSubmit={this.createNotebook} className='group'>
           <input type='text'
                   className='notebook-form-title'
                   valueLink={this.linkState('title')}
@@ -34,7 +34,7 @@ var NotebookForm = React.createClass({
             <div className='create-notebook button' onClick={this.createNotebook}><i className="fa fa-thumbs-up"></i></div>
           </div>
           <div className='notebook-form-description'>
-            <textarea valueLink={this.linkState('description')}
+            <input type='text' valueLink={this.linkState('description')}
                       placeholder='A little bit about this notebook...'/>
           </div>
         </form>

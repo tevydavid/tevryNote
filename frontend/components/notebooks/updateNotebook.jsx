@@ -16,6 +16,10 @@ var UpdateForm = React.createClass({
     this.props.toggleClicked();
   },
 
+  componentWillReceiveProps: function(newProps){
+    this.props.toggleClicked();
+  },
+
   deleteNotebook: function(){
     ApiUtil.deleteNotebook(this.state, function(){
       this.history.pushState(null, "/", {});
@@ -35,18 +39,19 @@ var UpdateForm = React.createClass({
             <p className='cancel button' onClick={this.props.toggleClicked}>
               <i className="fa fa-times"></i>
             </p>
-            <div className='create-Notebook button' onClick={this.updateNotebook}><i className="fa fa-thumbs-up"></i></div>
+            <p className='delete-notebook button' onClick={this.deleteNotebook}>DELETE_THIS_NOTEBOOK</p>
+            <p className='create-Notebook button' onClick={this.updateNotebook}><i className="fa fa-thumbs-up"></i></p>
           </div>
 
           <div className='Notebook-update-title'>
-            <textarea type='text'
+            <input type='text'
                       className='Notebook-form-body'
                       valueLink={this.linkState('description')}/>
           </div>
 
         </form>
       </div>
-    )
+    );
   }
 
 });
