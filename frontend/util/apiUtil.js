@@ -55,6 +55,18 @@ var ApiUtil = {
     });
   },
 
+  fetchSearchNotes: function (query, callback) {
+    $.ajax({
+      url: 'api/notes/search',
+      type: 'GET',
+      data: {for: query},
+      success: function (notes) {
+        NoteActions.receiveAllNotes(notes);
+        callback && callback();
+      }
+    });
+  },
+
   createNote: function (note, notebookId) {
     $.ajax({
       url: 'api/notebooks/' + notebookId +'/notes',

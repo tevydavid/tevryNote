@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/api/notebooks/liked', to: 'api/notebooks#liked'
 
+  get '/api/notes/search', to: 'api/notes#search'
+
   namespace :api, defaults: {format: :json} do
     resources :notes, only: [:destroy, :update]
     resources :notebooks, only: [:create, :destroy, :update, :index, :show] do
