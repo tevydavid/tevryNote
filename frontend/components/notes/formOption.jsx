@@ -17,15 +17,15 @@ var NoteFormOption = React.createClass({
   render: function(){
     if (this.state.clicked) {
       return (
-        <div className = 'note-form-box group'>
+        <div className = 'note-form-open'>
           <NoteForm toggleClicked={this.toggleClicked} notebookId = {this.props.notebookId}/>
         </div>
       );
     } else {
       return (
-        <div className='note-form-box group'>
+        <div className='note-form-closed'>
           <div className='new-note button' onClick={this.toggleClicked}>
-            <p className='note-form-icon'><i className='fa fa-sticky-note fa-2x'/><br/>NEW NOTE</p>
+            <span className='glyphicon glyphicon-pencil' aria-hidden='true'/>&nbsp; New Note
           </div>
         </div>
       );

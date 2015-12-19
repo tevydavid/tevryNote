@@ -26,18 +26,21 @@ var NoteIndexItem = React.createClass({
   },
 
   render: function(){
-    var heartClass = this.props.note.liked ? 'fa fa-heart' : 'fa fa-heart-o';
+    var starClass = this.props.note.liked ? 'glyphicon glyphicon-star' : 'glyphicon glyphicon-star-empty';
     if (this.state.clicked){
       return <UpdateForm noteId={this.props.note.id} toggleClicked={this.toggleClicked}/>;
     } else {
       return (
         <div className='note-container'>
           <div className='note-header group'>
-            <p className='note-title' onDoubleClick={this.toggleClicked}><i className="fa fa-sticky-note"></i>&nbsp; {this.props.note.title}</p>
-            <p className='note-delete button' onClick={this.deleteNote}>✗</p>
-            <p className='liked button'><i className={heartClass} onClick={this.toggleLike}/></p>
+            <p className='note-title' onDoubleClick={this.toggleClicked}>{this.props.note.title}</p>
+            <p className='note-delete button' onClick={this.deleteNote}>
+              <span className='glyphicon glyphicon-trash' aria-hidden ='true'/>
+            </p>
+            <p className='star button' onClick={this.toggleLike}>
+              <span className={starClass} aria-hidden="true" /></p>
           </div>
-          <div className='note-body group' onDoubleClick={this.toggleClicked}>
+          <div className='note-body' onDoubleClick={this.toggleClicked}>
             {this.props.note.body}
           </div>
         </div>

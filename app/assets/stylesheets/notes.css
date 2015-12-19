@@ -1,42 +1,50 @@
 
 .notes-container{
   float: right;
-  width: 70%
+  width: 75%
 }
 
 .note-container{
-  margin: 10px;
-  padding: 5px;
-  background: white;
+  background: rgba(0, 128, 0, 0.07);
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
 }
 
 .note-header{
-  height: 30px;
+  height: 43px;
 }
 
 .note-title{
-  padding: 3px;
+  white-space: pre-wrap;
+  padding-left: 21px;
   float: left;
-  font-weight: bolder;
-  color: green;
+  font-size: 17px;
+  color: #465D46;
+  padding-top: 11px;
 }
 
-.liked {
-  padding: 3px;
-  color: red;
-  float: right;
+.star {
+  padding-top: 13px;
+  padding-left: 13px;
+  color: #F9D301;
+  float: left;
+  font-size: 16px;
 }
 .note-delete{
-  padding: 3px;
-  color: blue;
+  padding-right: 16px;
+  padding-top: 17px;
+  color: #961D1D;
   float: right;
+  font-size: 12px;
 }
 .note-body{
   white-space: pre-wrap;
-  padding-top: 5px;
-  padding-left: 25px;
-  min-height: 90px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  min-height: 95px;
+  font-size: larger;
 }
+
 .note-form-title{
   margin: 4px;
 }
@@ -49,18 +57,19 @@
 .note-form-button{
   margin: 3px;
 }
-.note-form-box{
-  width: auto;
-  min-height: 96px;
-  margin: 0
 
+.note-form-closed{
+  height: 43px;
+  padding: 12px;
+  font-size: 17px;
+  background: #465D46;
+  border-bottom: 2px solid white;
+  padding-left: 37px;
+  color: white;
 }
 
 .new-note{
-  position: relative;
-  width: 59px;
-  margin-top: 22px;
-  margin-left: 50px;
+
 }
 
 .note-form-container{

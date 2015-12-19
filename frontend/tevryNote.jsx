@@ -4,6 +4,7 @@ var ReactDOM = require('react-dom'),
     Router = ReactRouter.Router,
     Route = ReactRouter.Route,
     IndexRoute = ReactRouter.IndexRoute,
+    Header = require('./components/header'),
     SearchBar = require('./components/notes/searchBar'),
     NotebookIndex = require('./components/notebooks/index'),
     LikedNotes = require('./components/notes/likedNotes'),
@@ -14,14 +15,12 @@ var ReactDOM = require('react-dom'),
 var App = React.createClass({
   render: function(){
     return (
-        <div className='everything'>
-          <header><h1 className='app-header-banner'></h1></header>
-          <div className='body-container group'>
-            <SearchBar/>
-            <NotebookIndex />
-            {this.props.children}
-          </div>
-        </div>
+      <div className='body-container group'>
+        <Header/>
+        <NotebookIndex />
+        {this.props.children}
+      </div>
+
     );
   }
 });

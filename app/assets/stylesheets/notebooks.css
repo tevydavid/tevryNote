@@ -1,24 +1,40 @@
 
-.notebooks-header{
-  margin: 5px;
-  text-indent: 20px;
+.notebooks-index-header{
+  padding-top: 15px;
+  font-size: 14px;
+  padding-left: 33px;
+  border-bottom: 2px solid white;
+  padding-bottom: 14px;
+  color: #465D46;
 }
 .notebooks-container{
   float: left;
-  width: 30%;
+  width: 25%;
   min-width: 250px;
-  max-width: 350px;
+  height: 100%;
+  border-right: 3px solid white;
 }
 
-.notebook-menu-item{
-  padding: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 5px;
+.notebook-index-item{
+  height: 60px;
 }
 
-.notebook-menu-item:hover{
-  background-color: aliceblue;
+.notebook-index-item .title{
+  font-size: 14px;
+  margin-left: 24px;
+  padding-top: 12px;
+}
+
+.notebook-index-item .description{
+  padding-left: 60px;
+    color: #BCCABC;
+}
+
+.notebook-index-item:hover{
+  background-color: #ECEAEA;
+  color: #035D03;
+  text-shadow: 0px 2px 4px white;
+  border: 1px solid white;
 }
 
 .notebook-title{
@@ -27,7 +43,6 @@
 .notebook-description{
   color: grey;
 }
-
 .notebook-form-box{
   min-height: 50px;
   height: auto;
@@ -37,10 +52,12 @@
 }
 
 .new-notebook{
-  height: 20px;
-  width: 80px;
-  margin-left: 23px;
-  padding: 15px;
+  font-size: 18px;
+  width: 70px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-left: 39px;
+  margin-top: 11px;
 }
 .notebook-form{
   width: inherit;
@@ -94,4 +111,40 @@
 
 .create-notebook:hover{
   color: green;
+}
+
+.likes-notebook-icon{
+  font-size: 35px;
+  width: 36px;
+  height: 34px;
+  margin-left: 55px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #F9D301;
+}
+.likes-notebook-icon:hover{
+  font-size: 37px;
+  text-shadow: 0px 4px 4px #9A8C3E;
+}
+
+
+/*notebook header on notes page*/
+.notebook-header{
+  height: 93px;
+  border-bottom: 2px solid white;
+  background: #BCCABC;
+}
+
+.notebook-header .title{
+  padding-left: 24px;
+  padding-top: 16px;
+  font-size: 18px;
+  color: #1A5D1A;
+}
+
+.notebook-header .description{
+  color: #EAFFEA;
+  padding-left: 24px;
+  padding-top: 10px;
+  font-size: 13px;
 }

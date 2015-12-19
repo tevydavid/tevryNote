@@ -13,18 +13,16 @@ var NotebookFormOption = React.createClass({
   render: function(){
     if (this.state.clicked){
       return (
-        <div className='notebook-form-box'>
+        <div className='notebook-form-open'>
           <NotebookForm toggleClicked={this.toggleClicked}
               notebookId={this.props.notebookId}/>
         </div>
       );
     } else {
       return (
-        <div className='notebook-form-box'>
           <div className='new-notebook button' onClick={this.toggleClicked}>
-            <p className='notebook-form-icon'><i className="fa fa-book"></i>&nbsp; NEW</p>
+            <i className="fa fa-book"></i>&nbsp; NEW
           </div>
-        </div>
       );
     }
   }

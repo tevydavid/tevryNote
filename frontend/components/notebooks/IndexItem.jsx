@@ -9,10 +9,12 @@ var NotebookIndexItem = React.createClass({
   },
 
   render: function () {
+    // <p className='notebook-description'>{this.props.notebook.description}</p>
     return(
-      <div onClick={this.showNotes} className='notebook-menu-item button'>
-        <p className='notebook-title'><i className="fa fa-book"></i>&nbsp; {this.props.notebook.title}</p>
-        <p className='notebook-description'>{this.props.notebook.description}</p>
+
+      <div className="notebook-index-item button" onClick={this.showNotes}>
+        <div className='title'><i className="fa fa-book fa-2x"></i>&nbsp; {this.props.notebook.title}</div>
+        <div className='description'>{this.props.notebook.description}</div>
       </div>
     );
   }
