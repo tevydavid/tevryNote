@@ -9,7 +9,6 @@ var NotebookIndexItem = React.createClass({
   },
 
   render: function () {
-    // <p className='notebook-description'>{this.props.notebook.description}</p>
     return(
 
       <div className="notebook-index-item button" onClick={this.showNotes}>

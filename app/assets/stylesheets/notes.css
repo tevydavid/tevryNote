@@ -45,18 +45,7 @@
   font-size: larger;
 }
 
-.note-form-title{
-  margin: 4px;
-}
-.note-form-body{
-  margin: 4px;
-  width: 680px;
-  height: 100px;
-  margin-bottom: 0px;
-}
-.note-form-button{
-  margin: 3px;
-}
+
 
 .note-form-closed{
   height: 43px;
@@ -68,17 +57,48 @@
   color: white;
 }
 
-.new-note{
 
-}
 
-.note-form-container{
-  background-color: white;
-  margin: 10px;
-  padding: 5px;
-  width: inherit;
-}
 
-.note-form .canel{
-  float: right;
+.note-form{
+  border-top: 18px solid #F7F7F7;
+  background: white;
+  border-bottom: 18px solid#F7f7f7;
 }
+  .note-form-title{
+    display: inline;
+    padding-left: 21px;
+    padding-top: 11px;
+    font-size: 17px;
+    color: #465D46;
+    width: 75%;
+
+  }
+  .note-form-body{
+    width: 100%;
+    min-height: 150px;
+    white-space: pre-wrap;
+    padding: 20px;
+    font-size: larger;
+  }
+
+  .note-form-buttons{
+    display: inline-block;
+    width: 25%;
+  }
+
+    .note-form-buttons p{
+      display: inline-block;
+      font-size: 15px;
+      color: lightgrey;
+      width: 15px;
+      margin-left: 20%;
+    }
+
+    .note-form-buttons .cancel:hover{
+      color: red;
+    }
+
+    .note-form-buttons .create-note:hover{
+      color: green;
+    }

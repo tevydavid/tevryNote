@@ -13,10 +13,8 @@ var NotebookFormOption = React.createClass({
   render: function(){
     if (this.state.clicked){
       return (
-        <div className='notebook-form-open'>
           <NotebookForm toggleClicked={this.toggleClicked}
               notebookId={this.props.notebookId}/>
-        </div>
       );
     } else {
       return (

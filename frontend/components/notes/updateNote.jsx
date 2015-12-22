@@ -1,7 +1,8 @@
 var React = require ('react'),
     LinkedStateMixin = require ('react-addons-linked-state-mixin'),
     NoteStore = require('../../stores/note'),
-    ApiUtil = require('../../util/apiUtil');
+    ApiUtil = require('../../util/apiUtil'),
+    Textarea = require('react-textarea-autosize');
 
 var UpdateForm = React.createClass({
   mixins: [LinkedStateMixin],
@@ -17,29 +18,28 @@ var UpdateForm = React.createClass({
 
   render: function (){
     return (
-      <div className='note-update-container'>
-        <form onSubmit={this.updateNote}>
+      <form onSubmit={this.updateNote} className='note-form'>
 
-          <input type='text'
-                    className='note-form-title'
-                    valueLink={this.linkState('title')}/>
+        <input type='text'
+                  className='note-form-title'
+                  valueLink={this.linkState('title')}/>
 
-          <div className='note-button group'>
-            <p className='cancel button' onClick={this.props.toggleClicked}>
-              <i className="fa fa-times"></i>
-            </p>
-            <div className='create-note button' onClick={this.updateNote}><i className="fa fa-thumbs-up"></i></div>
-          </div>
+        <div className='note-form-buttons'>
 
-          <div className='note-form-description'>
-            <textarea type='text'
-                      className='note-form-body'
-                      valueLink={this.linkState('body')}/>
-          </div>
+          <p className='create-note button' onClick={this.updateNote}>
+            <i className="fa fa-thumbs-up"></i></p>
 
-        </form>
-      </div>
-    )
+          <p className='cancel button' onClick={this.props.toggleClicked}>
+            <i className="fa fa-times"></i>
+          </p>
+          
+        </div>
+
+        <Textarea className='note-form-body'
+                  valueLink={this.linkState('body')}/>
+
+      </form>
+    );
   }
 
 });

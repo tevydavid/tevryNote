@@ -3,6 +3,16 @@ var React = require('react'),
 
 var Header = React.createClass({
 
+  onClick: function(e){
+    e.preventDefault();
+    $.ajax({
+      url: '/session',
+      type: 'DELETE',
+      success: function(data){
+        window.location.assign("/");
+      }
+    })
+  },
 
   render: function(){
     return(
@@ -28,7 +38,7 @@ var Header = React.createClass({
                   <li><a href="#">Settings</a></li>
 
                   <li role="separator" className="divider"></li>
-                  <li><a href="#">Log Out</a></li>
+                  <li><a href="#" onClick={this.onClick}>Log Out</a></li>
                 </ul>
               </li>
             </ul>

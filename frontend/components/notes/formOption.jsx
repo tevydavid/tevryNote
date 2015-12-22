@@ -17,9 +17,9 @@ var NoteFormOption = React.createClass({
   render: function(){
     if (this.state.clicked) {
       return (
-        <div className = 'note-form-open'>
-          <NoteForm toggleClicked={this.toggleClicked} notebookId = {this.props.notebookId}/>
-        </div>
+
+        <NoteForm toggleClicked={this.toggleClicked} notebookId = {this.props.notebookId}/>
+
       );
     } else {
       return (

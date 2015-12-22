@@ -14,3 +14,22 @@
 
   <input type="submit" value="Sign Up">
 </form>
+
+
+<h2 class='sign-in-header'>Notably</h2>
+
+<form action="<%= session_url %>" method="post" class='sign-in-form'>
+  <%= auth_token_input %>
+
+    <input type="text" name="user[email]" value="" placeholder="Email" class='email'>
+
+
+
+
+    <input type="password" name="user[password]" value="" placeholder="Password" class='password'>
+
+
+  <input id='log-in-button' type="submit" value="Sign In">
+</form>
+
+  <div class="question">Notably new? <%= link_to "Sign up!", new_user_url %></div>
