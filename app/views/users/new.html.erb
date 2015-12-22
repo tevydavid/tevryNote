@@ -1,4 +1,7 @@
-<h2 class='sign-in-header'>Notably</h2>
+<%= render "layouts/errors" %>
+
+
+<h2 class='sign-in-header'>Notabl</h2>
 
 <form action="<%= users_url %>" method="post" class='sign-in-form'>
   <%= auth_token_input %>
@@ -12,4 +15,14 @@
 
 </form>
 
-<div class="question">Already of note? <%= link_to "Sign In!", new_session_url %></div>
+<div class="question">Already notabl? <%= link_to "Sign In!", new_session_url %></div>
+
+<form action="<%= session_url %>" method="post" class='demo-form'>
+  <%= auth_token_input %>
+    <input type="hidden" name="user[email]" value="testing@test.com">
+    <input type="hidden" name="user[password]" value="password">
+    <p>
+      Want to see what notabl is all about?
+      <input id='demo-button' type="submit" value="Try This Demo">
+    </p>
+</form>
