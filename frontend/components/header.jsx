@@ -26,7 +26,7 @@ var Header = React.createClass({
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">tNote</a>
+            <a className="navbar-brand" href="#">Notably</a>
           </div>
 
 
