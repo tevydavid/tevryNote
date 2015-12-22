@@ -1,4 +1,4 @@
-# TevryNote
+# Notably
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
@@ -6,8 +6,8 @@
 
 ## Minimum Viable Product
 
-TevryNote is a web application inspired by Evernote built using Ruby on Rails
-and React.js. FresherNote allows users to:
+Notably is a web application inspired by Evernote built using Ruby on Rails
+and React.js. Notably allows users to:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
