@@ -1,6 +1,6 @@
 var React = require('react'),
     ApiUtil = require('../../util/apiUtil'),
-    UpdateForm = require('./UpdateNote');
+    UpdateForm = require('./updateNote');
 
 var NoteIndexItem = React.createClass({
   getInitialState: function(){
