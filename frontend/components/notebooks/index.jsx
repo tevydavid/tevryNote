@@ -1,7 +1,7 @@
 var React = require('react'),
     NotebookStore = require('../../stores/notebook'),
     ApiUtil = require('../../util/apiUtil'),
-    NotebookIndexItem = require('./indexItem'),
+    NotebookIndexItem = require('./IndexItem'),
     History = require('react-router').History,
     NotebookFormOption = require('./formOption');
 
