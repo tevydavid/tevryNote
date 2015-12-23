@@ -37,8 +37,8 @@ var NoteIndexItem = React.createClass({
             <p className='note-delete button' onClick={this.deleteNote}>
               <span className='glyphicon glyphicon-trash' aria-hidden ='true'/>
             </p>
-            <p className='star button' onClick={this.toggleLike}>
-              <span className={starClass} aria-hidden="true" /></p>
+            <button type="button" className='btn btn-default' onClick={this.toggleLike} data-toggle="tooltip" data-placement='right' title='Like this Note!'>
+              Like</button>
           </div>
           <div className='note-body' onDoubleClick={this.toggleClicked}>
             {this.props.note.body}
