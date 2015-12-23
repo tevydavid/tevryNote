@@ -1,20 +1,64 @@
+
+
 <%= render "layouts/errors" %>
 
 
-<h2 class='sign-in-header'>Notabl</h2>
+<div class="top-container">
+  <div class="inner-big">
+    <div class="container">
+      <div class='row'>
+        <div class='col-sm-8 col-sm-offset-2 text'>
+          <h1><strong>Notabl.</strong> Login</h1>
+          <div class="description">
+            <p>
+              This is a free notetaking app make with Ruby/Rails.
+              Create your own notes and take them anywhere.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 form-box">
+          <div class="form-top">
+            <div class="form-top-left">
+              <h3>Login to Notabl.</h3>
+                <p>Enter your Email and Password:</p>
+            </div>
+            <div class="form-top-right">
+              <i class="fa fa-key"></i>
+            </div>
+            </div>
+            <div class="form-bottom">
 
-<form action="<%= session_url %>" method="post" class='sign-in-form'>
-  <%= auth_token_input %>
-
-    <input type="text" name="user[email]" value="" placeholder="Email" class='email'>
 
 
+            <form role='form' action="<%= session_url %>" method="post" class='login-form'>
+              <%= auth_token_input %>
 
+              <div class='form-group' >
+                <label class='sr-only' for='form-username'>Email</label>
+                <input type="text" name="user[email]" class='form-username form-control' placeholder="Email..." id='form-username'>
+              </div>
+              <div class='form-group' >
+                <label class="sr-only" for="form-password">Password</label>
+                <input type="password" name="user[password]" class='form-control form-password' placeholder="Password..." id='form-password'>
+              </div>
 
-    <input type="password" name="user[password]" value="" placeholder="Password" class='password'>
+                <button type="submit" class="btn btn-default">Sign In</button>
 
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+<div class="col-sm-6 col-sm-offset-3 social-login">
+  <h3>Notably new?</h3>
+  <div class='social-login-buttons'>
+    <a class='btn btn-link-1' href='/users/new'>Sign Up!</a>
+  </div>
+</div>
 
-  <input id='log-in-button' type="submit" value="Sign In">
-</form>
-
-  <div class="question">Notably new? <%= link_to "Sign up!", new_user_url %></div>
+</div>
+</div>
+</div>
+</div>
