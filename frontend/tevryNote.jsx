@@ -15,13 +15,12 @@ var ReactDOM = require('react-dom'),
 var App = React.createClass({
   render: function(){
     return (
-      <div>
-        <Header/>
-        <div className="container">
+
+        <div className="body-container group">
+          <Header/>
           <NotebookIndex />
           {this.props.children}
         </div>
-      </div>
 
     );
   }

@@ -28,12 +28,12 @@ var SearchBar = React.createClass({
       return (
         <form className="navbar-form navbar-right" role="search">
           <div className="form-group">
-            <input type="text" className="form-control"
+            <input type="text" className="form-control" id="search-bar"
                     valueLink={this.linkState('for')}
                     placeholder="Search Notes"/>
           </div>
-          <button type="submit" className="btn btn-default"
-                  onClick={this.handleInput}><span className="glyphicon glyphicon-search" aria-hidden="true"/></button>
+          <button type="submit" className="btn btn-default" id="search-bar"
+                  onClick={this.handleInput}>Search</button>
         </form>
       );
     } else {
@@ -41,8 +41,8 @@ var SearchBar = React.createClass({
         <form className="navbar-form navbar-right" role="search">
           <div className="form-group">
           </div>
-          <button type="submit" className="btn btn-default"
-                  onClick={this.toggleClicked}><span className="glyphicon glyphicon-search" aria-hidden="true"/></button>
+          <button type="submit" className="btn btn-default" id='search-bar'
+                  onClick={this.toggleClicked}>Search</button>
         </form>
       );
     }

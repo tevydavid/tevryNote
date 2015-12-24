@@ -1,0 +1,206 @@
+.notebooks-index-header{
+  padding-top: 15px;
+  font-size: 14px;
+  padding-left: 33px;
+  border-bottom: 2px solid white;
+  padding-bottom: 14px;
+  color: #465D46;
+  text-align: left;
+}
+.notebooks-container{
+  float: left;
+  width: 25%;
+  min-width: 250px;
+  height: 100%;
+  border-right: 4px solid;
+  background: rgba(0,0,0,.9);
+}
+
+.notebook-index-item{
+  height: 80px;
+  text-align: left;
+}
+
+.notebook-index-item .title{
+  font-size: 14px;
+  margin-left: 24px;
+  padding-top: 12px;
+}
+
+.notebook-index-item .description{
+  padding-left: 60px;
+  color: #BCCABC;
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notebook-index-item:hover{
+  background-color: #91CE95;
+  color: #035D03;
+  text-shadow: 0px 2px 4px white;
+  border: 1px solid white;
+}
+
+
+/*new notebook component in sidebar*/
+
+.new-notebook{
+  font-size: 22px;
+  width: 100%;
+  padding-bottom: 5px;
+  padding-top: 19px;
+  padding-left: 39px;
+  height: 80px;
+  text-align: left;
+}
+  .new-notebook:hover{
+    background-color: #91CE95;
+    color: #035D03;
+    text-shadow: 0px 2px 4px white;
+    border: 1px solid white;
+  }
+
+.notebook-form {
+  width: 100%;
+  height: 110px;
+  padding: 3px;
+  border-top: 15px solid #F7F7F7;
+  border-bottom: 15px solid #F7F7F7;
+  background-color: white;
+}
+
+  .notebook-form-title {
+    font-size: 20px;
+    width: 100%;
+    height: 22px;
+    padding-left: 4px;
+  }
+  .notebook-form-description{
+    display: inline;
+    width: 90%;
+    height: 50px;
+    padding-left: 4px;
+    padding-top: 5px;
+  }
+
+  .new-notebook-buttons{
+    display: inline-block;
+    width: 10%;
+    height: 50px;
+  }
+
+
+      .create-notebook{
+        height: 50%;
+        padding: 5px;
+        color: darkgray;
+        font-size: 13px;
+      }
+        .create-notebook:hover{
+          color: green;
+        }
+
+    .new-notebook-buttons .cancel{
+      height: 50%;
+      padding: 5px;
+      color: darkgray;
+      font-size: 13px;
+    }
+      .new-notebook-buttons .cancel:hover{
+        color: red;
+      }
+
+
+/*star in sidebar*/
+
+.likes-notebook-icon{
+  font-size: 35px;
+  width: 100%;
+  height: 80px;
+  padding-left: 55px;
+  padding-top: 19px;
+  padding-bottom: 9px;
+  color: #F9D301;
+  text-align: left;
+}
+.likes-notebook-icon:hover{
+  font-size: 37px;
+  text-shadow: 0px 4px 4px #9A8C3E;
+  background-color: #91CE95;
+  border: 1px solid white;
+
+}
+
+
+/*notebook header on notes page*/
+.notebook-header{
+  height: 152px;
+  background: transparent;
+  text-align: left;
+}
+
+  .notebook-header .title{
+    padding-left: 24px;
+    padding-top: 16px;
+    font-size: 38px;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .notebook-header .description{
+    color: #EAFFEA;
+    padding-left: 24px;
+    padding-top: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+  }
+
+.update-notebook-form{
+  background-color: white;
+  border-top: 15px solid #F7F7F7;
+  border-bottom: 15px solid #F7F7F7;
+  height: 123px;
+}
+  .update-notebook-title{
+    display: inline;
+    width: 90%;
+    padding-left: 24px;
+    padding-top: 16px;
+    font-size: 18px;
+  }
+
+  .update-notebook-description{
+    display: inline;
+    width: 90%;
+    padding-left: 24px;
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  .update-notebook-buttons{
+    float: right;
+    width: 10%;
+    height: 100%;
+  }
+
+    .update-notebook-buttons p{
+      margin: 9px;
+      padding-top: 2px;
+      font-size: 13px;
+      width: 16px;
+      color: darkgrey;
+    }
+      .update-notebook-buttons p.cancel:hover{
+        color: red;
+      }
+
+      .delete-notebook:hover{
+        color: #961D1D;
+      }
+
+      .update-notebook:hover{
+        color: green;
+      }

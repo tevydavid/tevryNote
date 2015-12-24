@@ -35,16 +35,16 @@ var NotebookIndex = React.createClass({
     });
 
     return (
-        <div className='notebooks-container'>
-          <p className='notebooks-index-header'>NOTEBOOKS</p>
-          <NotebookFormOption/>
-          <div className='likes-notebook-icon button' onClick={this.showLikes} >
-            <span className='glyphicon glyphicon-star' aria-hidden="true" />
-          </div>
-          <div className='notebooks-index'>
-            {notebooks}
-          </div>
+      <div className='notebooks-container'>
+        <p className='notebooks-index-header'>NOTEBOOKS</p>
+        <NotebookFormOption/>
+        <div className='likes-notebook-icon button' onClick={this.showLikes} >
+          <i className='fa fa-star fa-lg' />
         </div>
+        <div className='notebooks-index'>
+          {notebooks}
+        </div>
+      </div>
     );
   }
 

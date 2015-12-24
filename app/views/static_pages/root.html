@@ -1,5 +1,10 @@
 <head>
     <%= javascript_include_tag 'application'%>
+
+    <script type="text/javascript">
+      var notabl = window.notabl
+      notabl = { email: "<%= current_user[:email] %>" }
+    </script>
 </head>
 
 <div class="" id='root'>

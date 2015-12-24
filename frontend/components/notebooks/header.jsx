@@ -39,8 +39,8 @@ var Header = React.createClass({
     } else {
       return(
         <div className="notebook-header">
-          <p className='title'
-              onDoubleClick={this.toggleClicked}>{this.state.notebook.title}</p>
+          <h1 className='title'
+              onDoubleClick={this.toggleClicked}>{this.state.notebook.title}</h1>
           <p className='description'
               onDoubleClick={this.toggleClicked}>{this.state.notebook.description}</p>
         </div>
