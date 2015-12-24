@@ -26,8 +26,9 @@ html, body {
 }
 
 body {
-  background-image: url('/assets/dark-notebook.jpg');
+  background-image: url(dark-notebook.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .text {
