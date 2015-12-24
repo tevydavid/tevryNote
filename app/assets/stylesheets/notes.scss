@@ -39,6 +39,18 @@
   float: right;
   font-size: 13px;
 }
+
+.note-edit{
+  padding-right: 16px;
+  padding-top: 10px;
+  color: grey;
+  float: right;
+  font-size: 13px;
+}
+
+.note-edit:hover{
+  color: green;
+}
 .note-body{
   white-space: pre-wrap;
   padding-left: 20px;
@@ -68,27 +80,7 @@
 }
 
 
-.note-form{
-  border-top: 18px solid #F7F7F7;
-  background: white;
-  border-bottom: 18px solid#F7f7f7;
-}
-  .note-form-title{
-    display: inline;
-    padding-left: 21px;
-    padding-top: 11px;
-    font-size: 17px;
-    color: #465D46;
-    width: 75%;
 
-  }
-  .note-form-body{
-    width: 100%;
-    min-height: 150px;
-    white-space: pre-wrap;
-    padding: 20px;
-    font-size: larger;
-  }
 
   .note-form-buttons{
     display: inline-block;

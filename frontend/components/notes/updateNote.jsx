@@ -2,7 +2,7 @@ var React = require ('react'),
     LinkedStateMixin = require ('react-addons-linked-state-mixin'),
     NoteStore = require('../../stores/note'),
     ApiUtil = require('../../util/apiUtil'),
-    Textarea = require('react-textarea-autosize');
+    ReactQuill = require('react-quill');
 
 var UpdateForm = React.createClass({
   mixins: [LinkedStateMixin],
@@ -16,29 +16,37 @@ var UpdateForm = React.createClass({
     this.props.toggleClicked();
   },
 
+  onTextChange: function(value) {
+    this.setState({ body:value });
+  },
+
   render: function (){
     return (
-      <form onSubmit={this.updateNote} className='note-form'>
+      <div className='edit-container' >
+        <h1>Edit Note</h1>
+        <form onSubmit={this.updateNote} className='note-form'>
 
-        <input type='text'
-                  className='note-form-title'
-                  valueLink={this.linkState('title')}/>
+          <input type='text'
+                    className='note-form-title'
+                    valueLink={this.linkState('title')}
+                    placeholder='Note Title'/>
 
-        <div className='note-form-buttons'>
 
-          <p className='create-note button' onClick={this.updateNote}>
-            <i className="fa fa-thumbs-up"></i></p>
+          <div className='note-form-buttons'>
+            <p className='create-note button' onClick={this.updateNote}>
+              SAVE</p>
+            <p className='cancel button' onClick={this.props.toggleClicked}>
+              CANCEL
+            </p>
+          </div>
+          <ReactQuill theme="snow"
+                      value={this.state.body}
+                      onChange={this.onTextChange}
+                      placeholder="Captain's Log, stardate 41153.7..." />
 
-          <p className='cancel button' onClick={this.props.toggleClicked}>
-            <i className="fa fa-times"></i>
-          </p>
-          
-        </div>
 
-        <Textarea className='note-form-body'
-                  valueLink={this.linkState('body')}/>
-
-      </form>
+        </form>
+      </div>
     );
   }
 

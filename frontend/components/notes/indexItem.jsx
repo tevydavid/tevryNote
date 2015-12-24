@@ -37,12 +37,15 @@ var NoteIndexItem = React.createClass({
             <p className='note-delete button' onClick={this.deleteNote}>
               <i className='fa fa-trash fa-lg'/>
             </p>
+            <p className='note-edit button' onClick={this.toggleClicked}>
+              <i className='fa fa-pencil fa-lg'/>
+            </p>
             <p onClick={this.toggleLike} className='star button'>
               <i className={starClass}/></p>
           </div>
-          <div className='note-body' onDoubleClick={this.toggleClicked}>
-            {this.props.note.body}
-          </div>
+          <div  className='note-body'
+                onDoubleClick={this.toggleClicked}
+                dangerouslySetInnerHTML={{__html: this.props.note.body}}></div>
         </div>
       );
     }

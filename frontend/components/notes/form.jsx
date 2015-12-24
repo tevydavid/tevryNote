@@ -1,7 +1,7 @@
 var React = require('react'),
     ApiUtil = require('../../util/apiUtil'),
     History = require('react-router').History,
-    Textarea = require('react-textarea-autosize'),
+    ReactQuill = require('react-quill'),
     LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var noteForm = React.createClass({
@@ -18,8 +18,15 @@ var noteForm = React.createClass({
     this.props.toggleClicked();
   },
 
+  onTextChange: function(value) {
+    this.setState({ body:value });
+  },
+
+
   render: function(){
     return(
+      <div className='edit-container' >
+        <h1>New Note</h1>
         <form onSubmit={this.createNote} className='note-form'>
 
           <input type='text'
@@ -27,20 +34,22 @@ var noteForm = React.createClass({
                     valueLink={this.linkState('title')}
                     placeholder='Note Title'/>
 
+
           <div className='note-form-buttons'>
             <p className='create-note button' onClick={this.createNote}>
-              <i className="fa fa-thumbs-up"></i></p>
+              SAVE</p>
             <p className='cancel button' onClick={this.props.toggleClicked}>
-              <i className="fa fa-times"></i>
+              CANCEL
             </p>
           </div>
-
-          <Textarea className='note-form-body'
-                    valueLink={this.linkState('body')}
-                    placeholder="Captain's Log, stardate 41153.7..."/>
+          <ReactQuill theme="snow"
+                      value={this.state.body}
+                      onChange={this.onTextChange}
+                      placeholder="Captain's Log, stardate 41153.7..." />
 
 
         </form>
+      </div>
     );
   }
 });

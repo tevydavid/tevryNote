@@ -1,0 +1,46 @@
+.edit-container{
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: fixed;
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,0.9);
+
+}
+
+input.note-form-title{
+  display: inline;
+  padding-left: 11px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  width: 75%;
+}
+
+input.note-form-title:focus{
+  display: inline;
+  padding-left: 11px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  width: 75%;
+}
+
+.quill {
+    text-align: left;
+}
+
+.note-form {
+    background: white;
+    border: 1px solid;
+    border-radius: 12px;
+}
+
+
+div#ql-editor-1{
+    min-height: 250px;
+}
