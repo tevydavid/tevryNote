@@ -23,7 +23,7 @@ var NoteFormOption = React.createClass({
       );
     } else {
       return (
-        <div className='note-form-closed button'onClick={this.toggleClicked}>
+        <div className='note-form-closed button' onClick={this.toggleClicked}>
             <i className='fa fa-pencil fa-lg'/>&nbsp; New Note
         </div>
       );

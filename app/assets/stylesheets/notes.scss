@@ -19,13 +19,14 @@
   white-space: pre-wrap;
   padding-left: 21px;
   float: left;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 400;
   color: #465D46;
   padding-top: 11px;
 }
 
 .star {
-  padding-top: 13px;
+  padding-top: 10px;
   padding-left: 13px;
   color: #F9D301;
   float: left;
@@ -33,17 +34,17 @@
 }
 .note-delete{
   padding-right: 16px;
-  padding-top: 17px;
+  padding-top: 10px;
   color: #961D1D;
   float: right;
-  font-size: 12px;
+  font-size: 13px;
 }
 .note-body{
   white-space: pre-wrap;
   padding-left: 20px;
   padding-bottom: 20px;
-  min-height: 95px;
-  font-size: larger;
+  min-height: 115px;
+  text-align: left;
 }
 
 
@@ -52,7 +53,7 @@
   height: 50px;
   line-height: 46px;
   font-size: 19px;
-  background: #465D46;
+  background: #4AAF51;
   padding-left: 37px;
   color: white;
   text-align: left;
@@ -62,7 +63,9 @@
   margin: 8px;
 }
 
-
+.note-form-closed:hover{
+  background: #51DC5B
+}
 
 
 .note-form{

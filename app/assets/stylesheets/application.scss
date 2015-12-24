@@ -73,3 +73,13 @@ button:hover, .button:hover{
   display: block;
   clear: both;
 }
+
+p{
+  margin: 0;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #51DC5B;
+    font-weight: 400;
+    background-color: transparent;
+}

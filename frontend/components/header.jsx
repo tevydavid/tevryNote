@@ -20,11 +20,11 @@ var Header = React.createClass({
         <div className="container-fluid">
 
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">Notably</a>
+            <a className="navbar-brand" href="#">Notabl.</a>
           </div>
 
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
             <ul className="nav navbar-nav navbar-right">
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{window.notabl.email}<span className="caret"></span></a>
@@ -38,7 +38,7 @@ var Header = React.createClass({
             </ul>
               <SearchBar/>
           </div>
-        </div>
+
       </nav>
     );
 
