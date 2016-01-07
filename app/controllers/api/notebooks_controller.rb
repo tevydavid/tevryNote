@@ -12,7 +12,7 @@ class Api::NotebooksController < ApplicationController
   end
 
   def show
-    @notebook = Notebook.find(params[:id])
+    @notebook = current_user.notebooks.find(params[:id])
   end
 
   def liked
@@ -21,13 +21,13 @@ class Api::NotebooksController < ApplicationController
   end
 
   def update
-    @notebook = Notebook.find(params[:id])
+    @notebook = current_user.notebooks.find(params[:id])
     @notebook.update(notebook_params)
     render :show
   end
 
   def destroy
-    @notebook = Notebook.find(params[:id])
+    @notebook = current_user.notebooks.find(params[:id])
     @notebook.destroy
     render :show
   end

@@ -10,7 +10,7 @@ User.destroy_all
 Note.destroy_all
 Notebook.destroy_all
 
-user = User.create!({email:'testing@test.com', password: 'password'})
+user = User.create!({email:'Demo', password: 'password'})
 
 notebook1 = Notebook.create!({user_id: user.id, title: 'Good Eats',
             description: 'These are good restaurants around app-academy'})

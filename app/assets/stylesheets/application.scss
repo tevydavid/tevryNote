@@ -20,12 +20,12 @@
  *= require_self
  */
 
-html, body {
+html, body, {
   width: 100%;
   height: 100%;
 }
 
-body {
+#background {
   background-image: url(dark-notebook.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ button:hover, .button:hover{
   min-height: 100%;
   margin-left: 0;
   margin-right: auto;
-  background-color: transparent;
+  background-color: #DCDCDC;
 }
 
 .group:after {

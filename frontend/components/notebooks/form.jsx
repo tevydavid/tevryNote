@@ -23,19 +23,19 @@ var NotebookForm = React.createClass({
     return(
         <form onSubmit={this.createNotebook} className ='notebook-form'>
           <input type='text'
-                  className='notebook-form-title'
+                  id='notebook-form-title'
                   valueLink={this.linkState('title')}
                   placeholder='New Notebook Title'/>
-                <textarea
-                  className='notebook-form-description'
+          <input type="text"
+                  id='notebook-form-description'
                   valueLink={this.linkState('description')}
-                  placeholder='A little bit about this notebook...'/>
-                <div className='new-notebook-buttons'>
-            <p className='cancel button' onClick={this.props.toggleClicked}>
-              <i className="fa fa-times"></i>
-            </p>
+                  placeholder='Optional blurb...'/>
+          <div className='new-notebook-buttons'>
             <p className='create-notebook button' onClick={this.createNotebook}>
-              <i className="fa fa-thumbs-up"></i></p>
+            SAVE</p>
+            <p className='cancel button' onClick={this.props.toggleClicked}>
+              CANCEL
+            </p>
           </div>
         </form>
     );

@@ -1,12 +1,14 @@
-.notebooks-index-header{
+.notebooks-index-header {
   padding-top: 15px;
-  font-size: 14px;
+  font-size: 24px;
   padding-left: 33px;
-  border-bottom: 2px solid white;
   padding-bottom: 14px;
-  color: #465D46;
+  color: #4AAF51;
   text-align: left;
 }
+
+
+
 .notebooks-container{
   position: absolute;
   float: left;
@@ -69,44 +71,49 @@
   width: 100%;
   height: 150px;
   padding: 3px;
+  background: white;
+  border-radius: 6px;
 }
 
-  .notebook-form-title {
+  #notebook-form-title {
     font-size: 20px;
     width: 100%;
-    height: 22px;
+    height: 51px;
     padding-left: 4px;
+    border: none;
   }
-  .notebook-form-description{
-    display: inline;
-    width: 90%;
-    height: 50px;
+
+  #notebook-form-description{
+    width: 100%;
+    height: 51px;
     padding-left: 4px;
-    padding-top: 5px;
+    border: none;
+
   }
 
   .new-notebook-buttons{
-    display: inline-block;
-    width: 10%;
+    width: 100%;
     height: 50px;
   }
 
 
       .create-notebook{
-        height: 50%;
-        padding: 5px;
+        display: inline-block;
         color: darkgray;
-        font-size: 13px;
+        font-size: 20px;
+        width: 50%;
+        margin-top: 6px;
       }
         .create-notebook:hover{
           color: green;
         }
 
     .new-notebook-buttons .cancel{
-      height: 50%;
-      padding: 5px;
+      display: inline-block;
       color: darkgray;
-      font-size: 13px;
+      font-size: 20px;
+      width: 50%;
+      margin-top: 6px;
     }
       .new-notebook-buttons .cancel:hover{
         color: red;

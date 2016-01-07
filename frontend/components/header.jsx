@@ -29,9 +29,6 @@ var Header = React.createClass({
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{window.notabl.email}<span className="caret"></span></a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">Settings</a></li>
-
-                  <li role="separator" className="divider"></li>
                   <li><a href="#" onClick={this.onClick}>Log Out</a></li>
                 </ul>
               </li>

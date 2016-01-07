@@ -8,24 +8,24 @@ class Api::NotesController < ApplicationController
   end
 
   def index
-    @notes = Notebook.find(params[:notebook_id]).notes
+    @notes = current_user.notebooks.find(params[:notebook_id]).notes
   end
 
   def search
     sql_string = "LIKE '%" + params[:for] + "%'"
-    @notes = Note.where("body " + sql_string)
-    @notes += Note.where("title " + sql_string)
+    @notes = current_user.notes.where("body " + sql_string)
+    @notes += current_user.notes.where("title " + sql_string)
     render 'api/notes/index.json.jbuilder'
   end
 
   def update
-    @note = Note.find(params[:id])
+    @note = current_user.notes.find(params[:id])
     @note.update(note_params)
     render :create
   end
 
   def destroy
-    @note = Note.find(params[:id])
+    @note = current_user.notes.find(params[:id])
     @note.destroy
     render :create
   end
