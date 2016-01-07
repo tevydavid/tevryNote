@@ -146,24 +146,25 @@
 /*notebook header on notes page*/
 .notebook-header{
   height: 152px;
-  background: transparent;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
   text-align: left;
+  margin: 0 8px 0 8px;
 }
 
   .notebook-header .title{
     padding-left: 24px;
     padding-top: 16px;
     font-size: 38px;
-    color: #fff;
+    color: #151515;
     font-weight: 500;
   }
 
   .notebook-header .description{
-    color: #EAFFEA;
+    color: #151515;
     padding-left: 24px;
     padding-top: 10px;
     font-size: 18px;
-    color: #fff;
     font-weight: 100;
   }
 
