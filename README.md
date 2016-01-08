@@ -1,4 +1,4 @@
-# Notably
+# Notabl.
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
@@ -9,7 +9,7 @@
 Notably is a web application inspired by Evernote built using Ruby on Rails
 and React.js. Notably allows users to:
 
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
+
 
 - [ ] Create an account
 - [ ] Log in / Log out

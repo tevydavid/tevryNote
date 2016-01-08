@@ -26,6 +26,7 @@ html, body, {
 }
 
 #background {
+  min-height: 100%;
   background-image: url(dark-notebook.jpg);
   background-size: cover;
   background-repeat: no-repeat;

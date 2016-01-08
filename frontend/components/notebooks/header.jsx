@@ -41,6 +41,9 @@ var Header = React.createClass({
         <div className="notebook-header">
           <h1 className='title'
               onDoubleClick={this.toggleClicked}>{this.state.notebook.title}</h1>
+          <div className='edit button' onClick={this.toggleClicked}>
+            <i className='fa fa-pencil fa-lg'/>
+          </div>
           <p className='description'
               onDoubleClick={this.toggleClicked}>{this.state.notebook.description}</p>
         </div>

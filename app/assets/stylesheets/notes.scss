@@ -36,22 +36,25 @@
 .note-delete{
   padding-right: 16px;
   padding-top: 10px;
-  color: #961D1D;
+  color: rgba(150,29,29,0.4);
   float: right;
   font-size: 13px;
+  :hover {
+    color: rgba(150,29,29,1);
+  }
 }
 
 .note-edit{
   padding-right: 16px;
   padding-top: 10px;
-  color: grey;
+  color: rgba(128,128,128, 0.4);
   float: right;
   font-size: 13px;
+  :hover{
+    color: green;
+  }
 }
 
-.note-edit:hover{
-  color: green;
-}
 .note-body{
   white-space: pre-wrap;
   padding-left: 20px;
@@ -96,10 +99,15 @@
       margin-left: 20%;
     }
 
+    .note-form-buttons .create-note {
+      font-weight: 500;
+      color: rgba(74,175,81,1);
+    }
+
     .note-form-buttons .cancel:hover{
       color: red;
     }
 
     .note-form-buttons .create-note:hover{
-      color: green;
+      color: rgba(74,175,81,0.7);
     }

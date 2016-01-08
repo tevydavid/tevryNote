@@ -22,7 +22,7 @@ var UpdateForm = React.createClass({
 
   deleteNotebook: function(e){
     e.preventDefault;
-    if (window.confirm('Do you really want to delete this notebook?')){
+    if (window.confirm("Do you really want to delete this notebook? \nThis will also delete all the notes in this notebook.")){
       ApiUtil.deleteNotebook(this.state, function(){
         this.history.pushState(null, "/", {});
       }.bind(this));
@@ -34,25 +34,20 @@ var UpdateForm = React.createClass({
         <form className='update-notebook-form' onSubmit={this.updateNotebook}>
 
           <input type='text'
-                    className='update-notebook-title'
+                    id='update-notebook-title'
                     valueLink={this.linkState('title')}/>
+          <input type='text'
+                    id='update-notebook-description'
+                    valueLink={this.linkState('description')}/>
 
-          <div className='update-notebook-buttons'>
-            <p className='cancel button' onClick={this.props.toggleClicked}>
-              <i className="fa fa-times"></i>
-            </p>
+          <p className='save button' onClick={this.updateNotebook}>
+          SAVE</p>
 
-            <p className='delete-notebook button' onClick={this.deleteNotebook}>
-              <span className='glyphicon glyphicon-trash' aria-hidden ='true'/>
-            </p>
+          <p className='cancel button' onClick={this.props.toggleClicked}>
+          CANCEL</p>
 
-            <p className='update-notebook button' onClick={this.updateNotebook}><i className="fa fa-thumbs-up"></i></p>
-          </div>
-
-          <textarea
-            className='update-notebook-description'
-            valueLink={this.linkState('description')}/>
-
+          <p className='delete button' onClick={this.deleteNotebook}>
+          DELETE</p>
 
         </form>
     );
