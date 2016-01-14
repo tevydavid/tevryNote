@@ -51,12 +51,19 @@
         </div>
       </div>
       <div class="row">
-<div class="col-sm-6 col-sm-offset-3 social-login">
-  <h3>Notably new? <a href='/users/new'><strong>Sign Up!</strong></a>
-  </h3>
-</div>
+          <div class="col-sm-6 col-sm-offset-3 social-login">
+            <h3>Notably new? <a href='/users/new'><strong>Sign Up!</strong></a>
+            </h3>
+            <form action="<%= session_url %>" method="post">
+              <%= auth_token_input %>
+              <input type="hidden" name="user[email]" value="Demo">
+              <input type="hidden" name="user[password]" value="password">
+              <h3>Want to see what notabl is all about? <input type='submit'
+                value='Try This Demo' id='demo-button'></h3>
+            </form>
+          </div>
+        </div>
 
-</div>
 </div>
 </div>
 </div>
