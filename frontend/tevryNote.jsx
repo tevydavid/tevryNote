@@ -26,8 +26,24 @@ var App = React.createClass({
   }
 });
 
+var Directions = React.createClass({
+
+  render: function(){
+
+    return (
+      <div className = 'notes-container'>
+        <p></p>
+        <p>← Create a new notebook.</p>
+        <p>← View your important notes.</p>
+        <p>← Your notebooks go here.</p>
+      </div>
+    );
+  }
+});
+
 var routes = (
     <Route path="/" component={App}>
+        <IndexRoute component={Directions}/>
         <Route path="notebooks/:id" component={NotesIndex} />
         <Route path='likes' component={LikedNotes} />
         <Route path='search' component={SearchResults} />
