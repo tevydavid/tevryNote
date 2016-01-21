@@ -32,10 +32,10 @@ var Directions = React.createClass({
 
     return (
       <div className = 'notes-container'>
-        <p></p>
-        <p>← Create a new notebook.</p>
-        <p>← View your important notes.</p>
-        <p>← Your notebooks go here.</p>
+        <p className='directions'></p>
+        <p className='directions'>← Create a new notebook.</p>
+        <p className='directions'>← View your important notes.</p>
+        <p className='directions'>← Your notebooks go here.</p>
       </div>
     );
   }
